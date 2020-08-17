@@ -1,0 +1,21 @@
+19
+price_open continuous
+price_high continuous
+price_low continuous
+price_close continuous
+price_change continuous
+volume continuous
+avg_volume continuous
+sales_mil continuous
+sales_per_share continuous
+shares_outstanding_mil continuous
+price_sales_share_ratio continuous
+vst_rank continuous
+rv_rank continuous
+rs_rank continuous
+rt_ranl continuous
+grt_rank continuous
+sgrt_rank continuous
+gpe_rank continuous
+market_cap_mil continuous
+has_options 0 1

@@ -1,0 +1,13 @@
+Tuple Format
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\UserInterface Examples\Tuple Format.txt
+
+Training Data
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\UserInterface Examples\Only Training Data.txt
+
+
+
+a.in Tuple Format
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\test.txt
+
+a.in Extracted Training Data
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\UserInterface Examples\a training data.txt

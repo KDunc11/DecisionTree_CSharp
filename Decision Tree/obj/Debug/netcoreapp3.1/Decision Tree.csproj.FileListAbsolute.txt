@@ -1,0 +1,38 @@
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.exe
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.deps.json
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.runtimeconfig.json
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.runtimeconfig.dev.json
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.dll
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.pdb
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.csprojAssemblyReference.cache
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.AssemblyInfoInputs.cache
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.AssemblyInfo.cs
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.dll
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.pdb
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.dll.config
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.dll
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.MachineLearning.dll
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.Math.Core.dll
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.Math.dll
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.Statistics.dll
+C:\Users\Kyle\Desktop\NNU\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.csproj.CopyComplete
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.exe
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.dll.config
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.deps.json
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.runtimeconfig.json
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.runtimeconfig.dev.json
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.dll
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Decision Tree.pdb
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.dll
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.MachineLearning.dll
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.Math.Core.dll
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.Math.dll
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\bin\Debug\netcoreapp3.1\Accord.Statistics.dll
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.csprojAssemblyReference.cache
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.AssemblyInfoInputs.cache
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.AssemblyInfo.cs
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.csproj.CopyComplete
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.dll
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.pdb
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.csproj.CoreCompileInputs.cache
+C:\Users\Kyle\Desktop\NNU\Spring 2020\Machine Learning\Decision Tree\Decision Tree\obj\Debug\netcoreapp3.1\Decision Tree.genruntimeconfig.cache

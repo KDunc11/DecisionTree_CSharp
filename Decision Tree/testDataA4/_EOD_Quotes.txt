@@ -1,0 +1,25 @@
+19
+price_open continuous
+price_high continuous
+price_low continuous
+price_close continuous
+price_change continuous
+volume continuous
+avg_volume continuous
+sales_mil continuous
+sales_per_share continuous
+shares_outstanding_mil continuous
+price_sales_share_ratio continuous
+vst_rank continuous
+rv_rank continuous
+rs_rank continuous
+rt_ranl continuous
+grt_rank continuous
+sgrt_rank continuous
+gpe_rank continuous
+market_cap_mil continuous
+has_options 0 1
+4.10 4.60 4.10 4.48 0.38 96600 20600 50.15 4.44 11 1.01 24 1266 329 590 503 2821 3439 50.62 0
+4.40 4.53 4.34 4.42 -0.06 9500 20800 50.15 4.44 11 1.00 31 1249 329 604 503 2825 3441 49.95 0
+17.00 17.66 17.51 17.77 0.12 583000 747200 560.91 9.36 59 1.9 873 1507 3233 1059 2163 844 1652 1064.96 1
+17.95 19.04 17.95 18.94 1.17 1394900 766100 560.91 9.36 59 2.02 389 1567 3231 489 2163 843 1764 1135.07 1

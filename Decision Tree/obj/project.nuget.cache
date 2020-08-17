@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "2UrA2EU4XuZIrHn9tvJCVeqwyfoq4XtQPfcnkHo9ij7qy3E/7yyCcRmitjucOWHndQ2Gm2ngTHOYhBkMr+KQnA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kyle\\Desktop\\NNU\\Spring 2020\\Machine Learning\\Decision Tree\\Decision Tree\\Decision Tree.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kyle\\.nuget\\packages\\accord\\3.8.0\\accord.3.8.0.nupkg.sha512",
+    "C:\\Users\\Kyle\\.nuget\\packages\\accord.machinelearning\\3.8.0\\accord.machinelearning.3.8.0.nupkg.sha512",
+    "C:\\Users\\Kyle\\.nuget\\packages\\accord.math\\3.8.0\\accord.math.3.8.0.nupkg.sha512",
+    "C:\\Users\\Kyle\\.nuget\\packages\\accord.statistics\\3.8.0\\accord.statistics.3.8.0.nupkg.sha512"
+  ],
+  "logs": []
+}
