@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Dynamic;
+using System.IO;
 
 namespace ML_Decision_Tree
 {
@@ -328,12 +329,12 @@ namespace ML_Decision_Tree
             Recall = truePos / (truePos + falseNeg);
         }
 
-        public void Print() //calls the private function to recusrively print the tree using a depth first search
+        public void Print(StreamWriter writer) //calls the private function to recusrively print the tree using a depth first search
         {
-            PrintDFS(Root);
+            PrintDFS(Root, writer);
         }
 
-        private void PrintDFS(TreeNode node, int tabs = 0)
+        private void PrintDFS(TreeNode node, StreamWriter writer, int tabs = 0)
         {
             if (node != null) //checks if the tree is empty or not
             {
@@ -343,19 +344,26 @@ namespace ML_Decision_Tree
                     {
                         if (tabs == 0)
                         {
+                            writer.Write(node.NextAttribute);
+                            writer.WriteLine(node.Children[i].Rule);
                             Console.Write(node.NextAttribute); //Prints the node with the next highest info gain
                             Console.WriteLine(node.Children[i].Rule); //Prints the rule for each child
                         }
                         else
                         {
                             for (int j = 0; j < tabs; ++j) //formats the output
+                            {
+                                writer.Write("\t");
                                 Console.Write("\t");
+                            }
 
+                            writer.Write(node.NextAttribute);
+                            writer.WriteLine(node.Children[i].Rule);
                             Console.Write(node.NextAttribute); //Prints the node with the next highest info gain
                             Console.WriteLine(node.Children[i].Rule); //Prints the rule for each child
                         }
 
-                        PrintDFS(node.Children[i], ++tabs);
+                        PrintDFS(node.Children[i], writer, ++tabs);
                         tabs--;
                     }
                 }
@@ -363,8 +371,12 @@ namespace ML_Decision_Tree
                 else //no children so a leaf node is reached
                 {
                     for (int j = 0; j < tabs; ++j) //formats the output
+                    {
+                        writer.Write("\t");
                         Console.Write("\t");
+                    }
 
+                    writer.WriteLine(node.NextAttribute);
                     Console.WriteLine(node.NextAttribute); //Prints the value of the leaf node
                 }
             }
@@ -379,6 +391,5 @@ namespace ML_Decision_Tree
         public decimal Recall { get; set; }
 
         private bool pruned_status = false;
-        private Key key { get; }
     }
 }

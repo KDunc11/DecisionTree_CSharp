@@ -239,8 +239,11 @@ namespace ML_Decision_Tree
             //}
             //else
             //{
-      
-                string[] inputLines = File.ReadAllLines(args[0]);
+            string path = Directory.GetCurrentDirectory() + @"\TreeOutput.csv";
+            if (File.Exists(path))
+                File.Delete(path);
+
+            string[] inputLines = File.ReadAllLines(args[0]);
                 List<Attribute> attributeArray = new List<Attribute>();
                 string[] attributeNames = new string[Convert.ToInt32(inputLines[0])]; //the # of attributes is always the first line
 
@@ -277,7 +280,9 @@ namespace ML_Decision_Tree
 
             Console.WriteLine("\n");
 
-            tree.Print();
+            StreamWriter writer = File.AppendText(path);
+            tree.Print(writer);
+            writer.Close();
         }
 
         /// <summary>
