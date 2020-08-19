@@ -2,7 +2,7 @@
   "profiles": {
     "Decision Tree": {
       "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\Kyle\\Desktop\\NNU\\Spring 2020\\Machine Learning\\Decision Tree\\Decision Tree\\testDataA4\\golf.in\""
+      "commandLineArgs": "\"C:\\Users\\Kyle\\Desktop\\DataQuest\\Himawari\\2019-11-03T05.csv\""
     }
   }
 }

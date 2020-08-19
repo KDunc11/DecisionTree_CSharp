@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.Dynamic;
 
 namespace ML_Decision_Tree
 {
@@ -22,9 +23,8 @@ namespace ML_Decision_Tree
         //Member Functions
 
         //recursively build the tree by splitting on a particular attribute, based on information gain
-        public void TreeRecursion(List<Tuple> tupleArray, TreeNode parentNode, List<Attribute> attributeArray, Attribute userLabels, List<string> continuousAttributeNames)
+        public void TreeRecursion(List<Tuple> tupleArray, TreeNode parentNode, List<Attribute> attributeArray, Attribute userLabels, List<string> continuousAttributeNames, TreeNode prevNode = null, int childIndex = -1)
         { 
-    
             if (tupleArray.Count > 0 && attributeArray.Count > 0 && !Equations.SubListClassesAreSame(tupleArray))
             {
                 string bestAttribute = string.Empty;
@@ -93,17 +93,30 @@ namespace ML_Decision_Tree
                 List<Attribute> prunedAttributeArray = new List<Attribute>(attributeArray);
                 prunedAttributeArray.RemoveAt(bestAttributeIndex);
 
-                for (int i = 0; i < subListArray.Length; ++i)
+                //for (int i = 0; i < subListArray.Length; ++i)
+                int index = 0;
+                int iteration = 0;
+                while(iteration < subListArray.Length)
                 {
                     if (continuousAttributeNames.Contains(bestAttribute))
                     {
-                        parentNode.AddChild(attributeArray[bestAttributeIndex].Values[i] + ":", string.Empty);
+                        parentNode.AddChild(attributeArray[bestAttributeIndex].Values[iteration] + ":", string.Empty);
                     }
                     else
                     {
-                        parentNode.AddChild("=" + attributeArray[bestAttributeIndex].Values[i] + ":", string.Empty);
+                        parentNode.AddChild("=" + attributeArray[bestAttributeIndex].Values[iteration] + ":", string.Empty);
                     }
-                    TreeRecursion(subListArray[i], parentNode.Children[i], prunedAttributeArray, userLabels, continuousAttributeNames);
+                    TreeRecursion(subListArray[iteration], parentNode.Children[index], prunedAttributeArray, userLabels, continuousAttributeNames, parentNode, index);
+                    if (pruned_status)
+                    {
+                        parentNode.Children.RemoveAt(index);
+                        pruned_status = false;
+                        index = 0;
+                        iteration++;
+                        continue;
+                    }
+                    iteration++;
+                    index++;
                 }
             }
             else if (tupleArray.Count > 0 && attributeArray.Count == 0)
@@ -136,7 +149,10 @@ namespace ML_Decision_Tree
             }
             else if (tupleArray.Count == 0) //no tuples left left to branch off of
             {
-                parentNode.NextAttribute = "No data left";
+                if (childIndex != -1) //prune the child
+                    pruned_status = true;
+                else
+                    parentNode.NextAttribute = "No data left";
             }
             else //all the tuples are of the same class
             {
@@ -361,5 +377,8 @@ namespace ML_Decision_Tree
         public decimal Accuracy { get; set; }
         public decimal Precision { get; set; }
         public decimal Recall { get; set; }
+
+        private bool pruned_status = false;
+        private Key key { get; }
     }
 }
