@@ -16,7 +16,7 @@ namespace ML_Decision_Tree
 
         public void Print()
         {
-            Console.WriteLine("\t [[ {0}, {1} ]\n\t  [ {2}, {3} ]]", TruePositive, FalseNegative, FalsePositive, TrueNegative);
+            Console.WriteLine($"\t [[ {TruePositive}, {FalseNegative} ]\n\t  [ {FalsePositive}, {TrueNegative} ]]");
         }
 
         private int TruePositive { get; }

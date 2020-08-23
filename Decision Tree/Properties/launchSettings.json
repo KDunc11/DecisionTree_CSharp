@@ -2,7 +2,7 @@
   "profiles": {
     "Decision Tree": {
       "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\Kyle\\Desktop\\DataQuest\\Himawari\\2019-11-03T05.csv\""
+      "commandLineArgs": "\"C:\\Users\\Kyle\\Desktop\\DataQuest\\Himawari\\2019-11-04T05.csv\" \"C:\\Users\\Kyle\\Desktop\\DataQuest\\Himawari\\classify.csv\""
     }
   }
 }

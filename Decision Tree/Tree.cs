@@ -214,71 +214,90 @@ namespace ML_Decision_Tree
                                     currentNode = node;
                                 }
 
-                                if (node.NextAttribute == userLabels.Values[0] && node.Children.Count == 0)
+                                if (node.Children.Count == 0)
                                 {
-                                    if (node.Rule.Contains("<="))
+                                    var leaf = CheckContinuousLeaf(node, userLabels, attributeVal);
+
+                                    if (leaf.Item1)
                                     {
-                                        string rule = node.Rule.Substring(3);
-                                        rule = rule.TrimEnd(':');
-                                        rule = rule.Trim();
-
-
-                                        if (Convert.ToDecimal(attributeVal) <= Convert.ToDecimal(rule))
-                                        {
-                                            t.SetClass(node.NextAttribute);
-                                            classified = true;
-                                            classifiedTuples.Add(t);
-                                            break;
-                                        }
+                                        t.SetClass(leaf.Item2);
+                                        classified = true;
+                                        classifiedTuples.Add(t);
+                                        break;
                                     }
-                                    else if (node.Rule.Contains(">"))
+                                    else
                                     {
-                                        string rule = node.Rule.Substring(2);
-                                        rule = rule.TrimEnd(':');
-                                        rule = rule.Trim();
-
-                                        if (Convert.ToDecimal(attributeVal) > Convert.ToDecimal(rule))
-                                        {
-                                            t.SetClass(node.NextAttribute);
-                                            classified = true;
-                                            classifiedTuples.Add(t);
-                                            break;
-                                        }
+                                        t.SetClass(userLabels.Values[userLabels.Values.Length - 1]);
+                                        classified = true;
+                                        classifiedTuples.Add(t);
+                                        break;
                                     }
                                 }
-
-                                if (currentNode.NextAttribute == userLabels.Values[1] && node.Children.Count == 0)
-                                {
-                                    if (node.Rule.Contains(">"))
-                                    {
-                                        string rule = node.Rule.Substring(2);
-                                        rule = rule.TrimEnd(':');
-                                        rule = rule.Trim();
-
-                                        if (Convert.ToDecimal(attributeVal) > Convert.ToDecimal(rule))
-                                        {
-                                            t.SetClass(node.NextAttribute);
-                                            classified = true;
-                                            classifiedTuples.Add(t);
-                                            break;
-                                        }
-                                    }
-                                    else if (node.Rule.Contains("<="))
-                                    {
-                                        string rule = node.Rule.Substring(3);
-                                        rule = rule.TrimEnd(':');
-                                        rule = rule.Trim();
+                                //if (node.NextAttribute == userLabels.Values[0] && node.Children.Count == 0)
+                                //{
+                                //    if (node.Rule.Contains("<="))
+                                //    {
+                                //        string rule = node.Rule.Substring(3);
+                                //        rule = rule.TrimEnd(':');
+                                //        rule = rule.Trim();
 
 
-                                        if (Convert.ToDecimal(attributeVal) <= Convert.ToDecimal(rule))
-                                        {
-                                            t.SetClass(node.NextAttribute);
-                                            classified = true;
-                                            classifiedTuples.Add(t);
-                                            break;
-                                        }
-                                    }
-                                }
+                                //        if (Convert.ToDecimal(attributeVal) <= Convert.ToDecimal(rule))
+                                //        {
+                                //            t.SetClass(node.NextAttribute);
+                                //            classified = true;
+                                //            classifiedTuples.Add(t);
+                                //            break;
+                                //        }
+                                //    }
+                                //    else if (node.Rule.Contains(">"))
+                                //    {
+                                //        string rule = node.Rule.Substring(2);
+                                //        rule = rule.TrimEnd(':');
+                                //        rule = rule.Trim();
+
+                                //        if (Convert.ToDecimal(attributeVal) > Convert.ToDecimal(rule))
+                                //        {
+                                //            t.SetClass(node.NextAttribute);
+                                //            classified = true;
+                                //            classifiedTuples.Add(t);
+                                //            break;
+                                //        }
+                                //    }
+                                //}
+
+                                //if (currentNode.NextAttribute == userLabels.Values[1] && node.Children.Count == 0)
+                                //{
+                                //    if (node.Rule.Contains(">"))
+                                //    {
+                                //        string rule = node.Rule.Substring(2);
+                                //        rule = rule.TrimEnd(':');
+                                //        rule = rule.Trim();
+
+                                //        if (Convert.ToDecimal(attributeVal) > Convert.ToDecimal(rule))
+                                //        {
+                                //            t.SetClass(node.NextAttribute);
+                                //            classified = true;
+                                //            classifiedTuples.Add(t);
+                                //            break;
+                                //        }
+                                //    }
+                                //    else if (node.Rule.Contains("<="))
+                                //    {
+                                //        string rule = node.Rule.Substring(3);
+                                //        rule = rule.TrimEnd(':');
+                                //        rule = rule.Trim();
+
+
+                                //        if (Convert.ToDecimal(attributeVal) <= Convert.ToDecimal(rule))
+                                //        {
+                                //            t.SetClass(node.NextAttribute);
+                                //            classified = true;
+                                //            classifiedTuples.Add(t);
+                                //            break;
+                                //        }
+                                //    }
+                                //}
                             }
                             else
                             {
@@ -290,21 +309,40 @@ namespace ML_Decision_Tree
                                 if (rule == attributeVal)
                                     currentNode = node;
 
-                                if (node.NextAttribute == userLabels.Values[0] && node.Children.Count == 0)
+                                if (node.Children.Count == 0)
                                 {
-                                    t.SetClass(node.NextAttribute);
-                                    classified = true;
-                                    classifiedTuples.Add(t);
-                                    break;
+                                    var leaf = CheckDiscreteLeaf(node, userLabels);
+                                    
+                                    if (leaf.Item1)
+                                    {
+                                        t.SetClass(leaf.Item2);
+                                        classified = true;
+                                        classifiedTuples.Add(t);
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        t.SetClass(userLabels.Values[userLabels.Values.Length - 1]);
+                                        classified = true;
+                                        classifiedTuples.Add(t);
+                                        break;
+                                    }
                                 }
+                                //if (node.NextAttribute == userLabels.Values[0] && node.Children.Count == 0)
+                                //{
+                                //    t.SetClass(node.NextAttribute);
+                                //    classified = true;
+                                //    classifiedTuples.Add(t);
+                                //    break;
+                                //}
 
-                                if (node.NextAttribute == userLabels.Values[1] && node.Children.Count == 0)
-                                {
-                                    t.SetClass(node.NextAttribute);
-                                    classified = true;
-                                    classifiedTuples.Add(t);
-                                    break;
-                                }
+                                //if (node.NextAttribute == userLabels.Values[1] && node.Children.Count == 0)
+                                //{
+                                //    t.SetClass(node.NextAttribute);
+                                //    classified = true;
+                                //    classifiedTuples.Add(t);
+                                //    break;
+                                //}
                             }
                         }
                     }
@@ -316,17 +354,26 @@ namespace ML_Decision_Tree
 
         public void CalcAccuracy(decimal truePos, decimal trueNeg, decimal falsePos, decimal falseNeg)
         {
-            Accuracy = (truePos + trueNeg) / (truePos + trueNeg + falseNeg + falsePos);
+            if ((truePos + trueNeg + falseNeg + falsePos) != 0)
+                Accuracy = (truePos + trueNeg) / (truePos + trueNeg + falseNeg + falsePos);
+            else
+                Accuracy = 0;
         }
 
         public void CalcPrecision(decimal truePos, decimal falsePos)
         {
-            Precision = (truePos / (truePos + falsePos));
+            if ((truePos + falsePos) != 0)
+                Precision = (truePos / (truePos + falsePos));
+            else
+                Precision = 0;
         }
 
         public void CalcRecall(decimal truePos, decimal falseNeg)
         {
-            Recall = truePos / (truePos + falseNeg);
+            if ((truePos + falseNeg) != 0)
+                Recall = truePos / (truePos + falseNeg);
+            else
+                Recall = 0;
         }
 
         public void Print(StreamWriter writer) //calls the private function to recusrively print the tree using a depth first search
@@ -382,6 +429,65 @@ namespace ML_Decision_Tree
             }
             else
                 Console.WriteLine("Cannot print, the tree was empty");
+        }
+
+        private (bool, string) CheckDiscreteLeaf(TreeNode node, Attribute userLabels)
+        {
+            bool classified = false;
+            string label = "";
+
+            foreach (string value in userLabels.Values)
+            {
+                if (value == node.NextAttribute)
+                {
+                    label = value;
+                    classified = true;
+                    break;
+                }
+            }
+
+            return (classified, label);
+        }
+
+        private (bool, string) CheckContinuousLeaf(TreeNode node, Attribute userLabels, string attributeValue)
+        {
+            bool classified = false;
+            string label = "";
+
+            foreach (string value in userLabels.Values)
+            {
+                if (value == node.NextAttribute)
+                {
+                    if (node.Rule.Contains("<="))
+                    {
+                        string rule = node.Rule.Substring(3);
+                        rule = rule.TrimEnd(':');
+                        rule = rule.Trim();
+
+                        if (Convert.ToDecimal(attributeValue) <= Convert.ToDecimal(rule))
+                        {
+                            label = value;
+                            classified = true;
+                            break;
+                        }
+                    }
+
+                    else if (node.Rule.Contains(">"))
+                    {
+                        string rule = node.Rule.Substring(2);
+                        rule = rule.TrimEnd(':');
+                        rule = rule.Trim();
+
+                        if (Convert.ToDecimal(attributeValue) > Convert.ToDecimal(rule))
+                        {
+                            label = value;
+                            classified = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            return (classified, label);
         }
 
         //Member Variables
